@@ -9,7 +9,8 @@ const keys = require('../config/keys');
 const User = mongoose.model('users');
 
 // serializeUser makes a cookie by assing what we have specified in the funtion passed to it ie the mongoose provided user id
-passport.serializeUser((user, done) => {                // the user model is the one that we just received from the database down.
+ // the user model is the one that we just received from the database down.
+passport.serializeUser((user, done) => {               
   done(null, user.id);
   
 })
@@ -24,23 +25,23 @@ passport.deserializeUser((id, done) => {
 passport.use(
   new GoogleStrategy (
     {
-      clientID: keys.googleClientID,                    // These represent the developers google oauth console details.
+      // These represent the developers google oauth console details.
+      clientID: keys.googleClientID,                    
       clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback',
       proxy: true
     }, 
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({googleId: profile.id})
-      .then((existingUser) => {
-        if (existingUser) {
-          done(null, existingUser);
+    async (accessToken, refreshToken, profile, done) => {
+      const existingUser = await User.findOne({googleId: profile.id})
 
-        } else {
-          new User({ googleId: profile.id})             // this is creating a user model.
-            .save()
-            .then(user => done(null, user));            // this is the user model/instance that we are getting from the database.
-        }
-      });
+      if (existingUser) {
+        return done(null, existingUser);
+      } 
+      
+      // this is creating a user model.
+      const user = await new User({ googleId: profile.id }).save();               
+      // this is the user model/instance that we are getting from the database.
+      done(null, user);      
     }
   )
 );
