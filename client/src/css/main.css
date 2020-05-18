@@ -36,3 +36,22 @@ body {
 #custom-color {
   background: rgb(242, 133, 2);
 }
+
+#custom-form-btn,
+#custom-cancel-btn {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#custom-form {
+  margin-top: 3rem;
+}
+
+#custom-field {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
