@@ -40,6 +40,12 @@ body {
 #custom-form-btn,
 #custom-cancel-btn {
   background-color: rgb(255, 255, 255);
+}
+
+#custom-form-btn,
+#custom-cancel-btn,
+#custom-send-btn,
+#custom-back-btn {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 0;
