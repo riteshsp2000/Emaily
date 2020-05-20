@@ -8,7 +8,7 @@ The user can send surveys/emails depending upon the number of credits he/she has
 To send the survey/email the user has to fill up a form after which he can review it and finally send it to all the recipients.
 
 Technology Stack :-
-Frontend :- React.js, Redux, React-Redux, Redux-Thunk, Redux-Forms
-Backend :- Node.js, Express, MongoDB, Mongoose, Sendgrid, Stripe, Google OAuth2.0
+Frontend :- React.js, Redux, React-Redux, Redux-Thunk, Redux-Forms, React-Router, React-Stripe-Checkout <br>
+Backend :- Node.js, Express, MongoDB, Mongoose, Sendgrid, Stripe, Google OAuth2.0, Passport
 
 The user can review 
