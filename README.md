@@ -1,3 +1,11 @@
+<p>
+    <img src="https://img.shields.io/badge/built--on-nodeJS-green?style=flat">
+    <img src="https://img.shields.io/badge/client--side-React.js-blue">
+    <img src="https://img.shields.io/badge/storage-mongoDB-blue?style=flat&logo=mongodb">
+    <img src="https://img.shields.io/badge/package--manager-npm-grenblue?style=flat">
+    <img src="https://img.shields.io/badge/routing-Express-yellow?style=flat">   
+</p>
+
 # Emaily
 A Bulk email and survey sending service.
 
