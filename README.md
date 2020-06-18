@@ -19,4 +19,13 @@ Technology Stack :-
 Frontend :- React.js, Redux, React-Redux, Redux-Thunk, Redux-Forms, React-Router, React-Stripe-Checkout <br>
 Backend :- Node.js, Express, MongoDB, Mongoose, Sendgrid, Stripe, Google OAuth2.0, Passport
 
-The user can review 
+## Starting the project on local server.
+1. install node.js
+2. change into the project directory.
+3. install the dependancies using ``` npm install ```
+4. start the server using ``` npm start ```
+
+The project will rul on ``` localhost:3000 ``` in your browser
+
+![image](https://drive.google.com/uc?export=view&id=1xHj2hPgfTEG88Ujm9XZXydXsRz9cuAus)
+
